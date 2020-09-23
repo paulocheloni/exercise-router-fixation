@@ -1,10 +1,17 @@
 import React from 'react';
 
-const Users = () => (
-  <div>
+class Users extends React.Component {
+  render() {
+    const {greetingMessage }  = this.props;
+    const { classID } = this.props.match.params;
+    return (
+      <div>
     <h2> Users </h2>
-    <p> My awesome Users component </p>
-  </div>
-);
+    <p> {greetingMessage}, {classID},  this is my awesome Users component </p>
+    </div>
+    )
+  }
+  
+}
 
 export default Users;
